@@ -1,0 +1,43 @@
+# 
+# brief description of the projects
+
+ 754_0000 : default production target
+ 754_0001 : Hayman2 production target
+
+* <2020-03-04 Wed> : output of s0:                          
+/projects/mu2e/app/users/murat/v6_0_0>mu2e -c Print/fcl/dumpDataProducts.fcl -s $PWD/results/2020-03-04-21-29.vertex_s0.7c99dbed2f06.2189/sim.owner.pbar_s0.version.sequencer.art -n 3 
+04-Mar-2020 21:58:49 CST  Initiating request to open input file "/projects/mu2e/app/users/murat/v6_0_0/results/2020-03-04-21-29.vertex_s0.7c99dbed2f06.2189/sim.owner.pbar_s0.version.sequencer.art"
+04-Mar-2020 21:58:50 CST  Opened input file "/projects/mu2e/app/users/murat/v6_0_0/results/2020-03-04-21-29.vertex_s0.7c99dbed2f06.2189/sim.owner.pbar_s0.version.sequencer.art"
+Begin processing the 1st record. run: 1 subRun: 0 event: 1 at 04-Mar-2020 21:58:51 CST
+Found 3 data products in this Event
+Data products: 
+Friendly Class Name  Module Label  Instance Name  Process Name     Product ID
+     mu2e::StatusG4         g4run                       pbars0  1355898525
+mu2e::SimParticlemv         g4run                       pbars0  2556726704
+ mu2e::GenParticles      generate                       pbars0  3296348036
+
+Begin processing the 2nd record. run: 1 subRun: 0 event: 2 at 04-Mar-2020 21:58:51 CST
+Found 3 data products in this Event
+Data products: 
+Friendly Class Name  Module Label  Instance Name  Process Name     Product ID
+     mu2e::StatusG4         g4run                       pbars0  1355898525
+mu2e::SimParticlemv         g4run                       pbars0  2556726704
+ mu2e::GenParticles      generate                       pbars0  3296348036
+
+Begin processing the 3rd record. run: 1 subRun: 0 event: 3 at 04-Mar-2020 21:58:51 CST
+Found 3 data products in this Event
+Data products: 
+Friendly Class Name  Module Label  Instance Name  Process Name     Product ID
+     mu2e::StatusG4         g4run                       pbars0  1355898525
+mu2e::SimParticlemv         g4run                       pbars0  2556726704
+ mu2e::GenParticles      generate                       pbars0  3296348036
+
+Found 2 data products in this SubRun
+Data products: 
+                     Friendly Class Name  Module Label  Instance Name  Process Name     Product ID
+                     mu2e::GenEventCount    genCounter                       pbars0  1037629646
+uintmu2e::PhysicalVolumeInfomvstd::pairs    compressPV                       pbars0  3468039105
+
+Found 0 data products in this Run
+04-Mar-2020 21:58:51 CST  Closed input file "/projects/mu2e/app/users/murat/v6_0_0/results/2020-03-04-21-29.vertex_s0.7c99dbed2f06.2189/sim.owner.pbar_s0.version.sequencer.art"
+Art has completed and will exit with status 0.
