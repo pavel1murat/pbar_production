@@ -38,7 +38,7 @@ source : {
 services : { @table::Services.Sim 
     TFileService           : { fileName : "nts.owner.pbar_s1_toVD91.754_0001.sequencer.root" }
     GeometryService       : { @table::Services.Sim.GeometryService
-	inputFile         : "Mu2eG4/geom/geom_common_hayman2.txt"
+	inputFile         : "pbar_production/754_0001/geom_754_0001.txt"
     }  
 }
 
@@ -46,14 +46,7 @@ physics : {
 
     producers : {
 
-        g4run : {
-
-            module_type       : Mu2eG4
-            physics           : @local::mu2eg4DefaultPhysics
-            ResourceLimits    : @local::mu2eg4DefaultResourceLimits
-            TrajectoryControl : @local::mu2eg4NoTrajectories
-            debug             : @local::mu2eg4DefaultDebug
-            visualization     : @local::mu2eg4NoVisualization
+        g4run : { @table::Mu2eG4.producers.g4run 
 
             MultiStageParameters : {
                  simParticleNumberOffset : 100000
@@ -61,21 +54,13 @@ physics : {
                  inputSimParticles          : "pbarWrite"
                  inputMCTrajectories        : ""
                  inputPhysVolumeMultiInfo   : "compressPV"
-          }
-
-            doWriteLegacyPhysVolumeInfo : false
-
-            SDConfig : {
-                enableSD         : [ virtualdetector ] // activate just the explicitly listed SDs
-                TimeVD           : { times : [] }
-            }
+	    }
 
             // Mu2eG4 cuts are evaluated in the listed order.
             // The first match wins.  For the "intersection"
             // type, the first false stops the evaluation.
             // For the "union" type the first true stops the evaluation.
-            Mu2eG4StackingOnlyCut : @local::mu2eg4CutNeutrinos
-            Mu2eG4SteppingOnlyCut : @local::mu2eg4NoCut
+
             Mu2eG4CommonCut : {
                 type : union
                 pars : [
@@ -180,6 +165,6 @@ services.message.destinations.log.categories.ArtReport.reportEvery : 1
 services.message.destinations.log.categories.ArtReport.limit       : 1
 services.message.destinations.log.categories.ArtReport.timespan    : 300
 
-// Initialze seeding of random engines: do not put these lines in base .fcl files for grid jobs.
-services.SeedService.baseSeed          : 0
+# this is needed now...
+services.SeedService.baseSeed          : 8
 services.SeedService.maxUniqueEngines  : 20
