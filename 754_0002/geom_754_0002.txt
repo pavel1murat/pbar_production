@@ -70,8 +70,10 @@ double mu2e.detectorSystemZ0 = 10171.;   // mm  G4BL: (17730-7292=9801 mm)
 #include "Mu2eG4/geom/protonAbsorber_cylindrical_v02.txt"
 #include "Mu2eG4/geom/degrader_v01.txt"
 
-int targetPS_version                       = 1;
 #include "Mu2eG4/geom/ProductionTargetInPS.txt"
+int targetPS_version                       = 1;
+string targetPS_Hub_materialName           = "PSVacuum";
+
 //#include "Mu2eG4/geom/protonBeamDump_v02.txt"
 #include "Mu2eG4/geom/protonBeamDump_v03.txt"
 #include "Mu2eG4/geom/extmon_fnal_v02.txt"

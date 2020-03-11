@@ -1,8 +1,11 @@
 # 
 # brief description of the projects
 
- 754_0000 : default production target
+ 754_0000 : CD3     production target
  754_0001 : Hayman2 production target
+ 754_0002 : CD3     production target, no hubs (hub material = "PSVacuum")
+
+* *results* (data/histogram/log files): file:/mu2e/data/users/murat/datasets/pbar_production
 
 * <2020-03-04 Wed> : output of s0:                          
 /projects/mu2e/app/users/murat/v6_0_0>mu2e -c Print/fcl/dumpDataProducts.fcl -s $PWD/results/2020-03-04-21-29.vertex_s0.7c99dbed2f06.2189/sim.owner.pbar_s0.version.sequencer.art -n 3 
